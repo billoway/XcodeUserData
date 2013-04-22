@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sqlinsert</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString* tSql = @"INSERT INTO &lt;#name#&gt;\
+(&lt;#row1#&gt;, &lt;#row2#&gt;, &lt;#row3#&gt;, &lt;#row4#&gt;, &lt;#row5#&gt;),values\
+(?, ?, ?, ?, ?)";
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0E2438BA-29A7-45FB-B7A9-9E0570BB2A21</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>SQL Insert</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

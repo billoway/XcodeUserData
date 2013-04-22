@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addSwitch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UISwitch* tSwitch = [[UISwitch alloc] init];
+    tSwitch.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tSwitch.tag = &lt;#i#&gt;;
+    [tSwitch addTarget:self action:@selector(&lt;#sel#&gt;) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:tSwitch];
+    [tSwitch release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C6E3500E-0DE9-409E-A825-D6440248D5DF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add Switch</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addtextfield</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UITextField* tTextField = nil;
+    tTextField = [[UITextField alloc] init];
+    tTextField.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tTextField.backgroundColor = [UIColor clearColor];
+    tTextField.delegate = self;
+    tTextField.tag = &lt;#i#&gt;;
+    [tTextField setText:@"&lt;#s#&gt;"];
+    [tTextField setPlaceholder:@"&lt;#s#&gt;"];
+    [tTextField setFont:[UIFont boldSystemFontOfSize:&lt;#f#&gt;.f]];
+    [tTextField setTextColor:[UIColor &lt;#color#&gt;]];
+    [tTextField setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];//垂直居中
+    [self.view addSubview:tTextField];
+    [tTextField release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CF1422B6-21B6-44F8-BFF8-52BCE58C0284</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add textfield</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

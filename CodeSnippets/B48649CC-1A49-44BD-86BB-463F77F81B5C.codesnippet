@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>animation</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        CGContextRef context = UIGraphicsGetCurrentContext();
+        [UIView beginAnimations:@"&lt;#id#&gt;" context:context];
+        [UIView setAnimationDuration:&lt;#time#&gt;];
+        [UIView setAnimationDelegate:self];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [UIView setAnimationWillStartSelector:&lt;#(SEL)#&gt;];
+        [UIView setAnimationDidStopSelector:&lt;#(SEL)#&gt;];
+
+        &lt;#animation#&gt;;
+        
+        [UIView commitAnimations];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B48649CC-1A49-44BD-86BB-463F77F81B5C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Animation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

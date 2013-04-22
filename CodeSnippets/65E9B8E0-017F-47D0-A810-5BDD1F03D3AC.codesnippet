@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addlabel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UILabel* tLabel = nil;
+    tLabel = [[UILabel alloc] init];
+    tLabel.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tLabel.backgroundColor = [UIColor clearColor];
+    tLabel.userInteractionEnabled = NO;
+    [tLabel setText:@"&lt;#s#&gt;"];
+    [tLabel setFont:[UIFont systemFontOfSize:&lt;#f#&gt;.f]];
+    [tLabel setTextColor:[UIColor &lt;#color#&gt;]];
+    [tLabel setShadowColor:[UIColor &lt;#color#&gt;]];
+    [tLabel setShadowOffset:_ShadowSize];
+    [tLabel setTextAlignment:NSTextAlignmentLeft];
+    [tLabel setNumberOfLines:0];
+    [self.view addSubview:tLabel];
+    [tLabel release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>65E9B8E0-017F-47D0-A810-5BDD1F03D3AC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add label</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

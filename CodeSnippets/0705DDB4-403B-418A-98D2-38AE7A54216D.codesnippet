@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addimage</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIImageView* tImgView = nil;
+    tImgView = [[UIImageView alloc] init];
+    tImgView.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tImgView.userInteractionEnabled = YES;
+    tImgView.backgroundColor = [UIColor clearColor];
+    [tImgView setImage:[UIImage getImage:@"&lt;#s#&gt;"]];
+    [self.view addSubview:tImgView];
+    [tImgView release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0705DDB4-403B-418A-98D2-38AE7A54216D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add image</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

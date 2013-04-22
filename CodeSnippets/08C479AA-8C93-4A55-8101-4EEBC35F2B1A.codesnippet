@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>qqReadMe</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ * Copyright (C) 2013 GEARSOFT
+ * @project name    :   &lt;#App#&gt;
+ * @description     :   &lt;#description#&gt;
+ * @author          :   &lt;#author#&gt;
+ * @version         :   $ Id: $
+ * @date            :   &lt;#2013-01-01#&gt;
+ */
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>08C479AA-8C93-4A55-8101-4EEBC35F2B1A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ReadMe</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

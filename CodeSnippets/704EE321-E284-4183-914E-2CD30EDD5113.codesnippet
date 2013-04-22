@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sqlcreate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString* tSql = @"CREATE TABLE &lt;#name#&gt;(\
+&lt;#row1#&gt; VARCHAR(&lt;#50#&gt;),\
+&lt;#row2#&gt; VARCHAR(&lt;#50#&gt;),\
+&lt;#row3#&gt; VARCHAR(&lt;#50#&gt;),\
+&lt;#row4#&gt; VARCHAR(&lt;#50#&gt;),\
+&lt;#row5#&gt; VARCHAR(&lt;#50#&gt;))";
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>704EE321-E284-4183-914E-2CD30EDD5113</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>SQL Create</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

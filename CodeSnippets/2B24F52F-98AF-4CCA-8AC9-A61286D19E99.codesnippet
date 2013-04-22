@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tableviewdelegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark --------------- UITableView Delegate ---------------
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section
+{
+    int count = &lt;#count#&gt;;
+	return count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *) indexPath
+{
+    float h = &lt;#h#&gt;.f;
+    return  h;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static NSString *tIdentifier = @"Identifier";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tIdentifier];
+    
+	if(!cell)
+	{
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tIdentifier] autorelease];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.editingAccessoryType = UITableViewCellEditingStyleDelete;
+    }
+    cell.textLabel.text = @"&lt;#s#&gt;";
+    
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DLog();
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2B24F52F-98AF-4CCA-8AC9-A61286D19E99</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableView delegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addScrollView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIScrollView* tScrollView = nil;
+    tScrollView = [[UIScrollView alloc] init];
+    tScrollView.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tScrollView.backgroundColor = [UIColor clearColor];
+    tScrollView.delegate = self;
+    tScrollView.tag = &lt;#x#&gt;;
+    [tScrollView setContentSize:CGSizeMake(&lt;#w#&gt;, &lt;#h#&gt;)];
+    [tScrollView setBounces:NO];
+    [tScrollView setDirectionalLockEnabled:YES];
+    [tScrollView setScrollEnabled:YES];
+    [tScrollView setPagingEnabled:YES];
+    [tScrollView setShowsHorizontalScrollIndicator:NO];
+    [tScrollView setShowsVerticalScrollIndicator:NO];
+    [tScrollView setDecelerationRate:UIScrollViewDecelerationRateFast];
+    [self.view addSubview:tScrollView];
+    [tScrollView release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DE97EDE4-6EEC-4FA8-91C3-85A435F8218F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add ScrollView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

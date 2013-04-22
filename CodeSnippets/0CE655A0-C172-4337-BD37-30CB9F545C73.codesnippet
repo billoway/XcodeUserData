@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addbutton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIButton* tButton = nil;
+tButton = [UIButton buttonWithType:UIButtonTypeCustom];
+tButton.frame = CGRectMake(&lt;#x#&gt;, &lt;#y#&gt;, &lt;#w#&gt;, &lt;#h#&gt;);
+tButton.tag = &lt;#x#&gt;;
+tButton.backgroundColor = [UIColor clearColor];
+[tButton setTitle:@"&lt;#x#&gt;" forState:UIControlStateNormal];
+[tButton setTitleColor:[UIColor &lt;#color#&gt;] forState:UIControlStateNormal];
+[tButton.titleLabel setFont:[UIFont boldSystemFontOfSize:&lt;#f#&gt;.f]];
+[tButton setImage:[UIImage getImage:@"&lt;#x#&gt;"] forState:UIControlStateNormal];
+[tButton setImage:[UIImage getImage:@"&lt;#x#&gt;"] forState:UIControlStateHighlighted];
+[tButton setImageEdgeInsets:UIEdgeInsetsMake(&lt;#top#&gt;, &lt;#left#&gt;, &lt;#bottom#&gt;, &lt;#right#&gt;)];
+[tButton setBackgroundImage:[UIImage getImage:@"&lt;#x#&gt;"] forState:UIControlStateNormal];
+[tButton setBackgroundImage:[UIImage getImage:@"&lt;#x#&gt;"] forState:UIControlStateHighlighted];
+[tButton addTarget:self action:@selector(&lt;#sel#&gt;) forControlEvents:UIControlEventTouchUpInside];
+[self.view addSubview:tButton];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0CE655A0-C172-4337-BD37-30CB9F545C73</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add button</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

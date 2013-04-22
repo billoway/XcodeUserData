@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addcontrol</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIControl* tControl = nil;
+    tControl = [[UIControl alloc] init];
+    tControl.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tControl.backgroundColor = [UIColor &lt;#color#&gt;];
+    tControl.userInteractionEnabled = YES;
+    tControl.tag = &lt;#i#&gt;;
+    [tControl addTarget:self action:@selector(&lt;#sel#&gt;) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:tControl];
+    [tControl release];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>477BC302-B267-4413-86B6-8F12254D883F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>add control</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

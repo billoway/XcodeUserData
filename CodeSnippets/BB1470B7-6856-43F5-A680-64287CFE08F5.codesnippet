@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>scrollviewdelegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark --------------- UIScrollView Delegate ---------------
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+// 只要view有滚动(不管是拖、拉、放大、缩小  等导致) 都会执行此函数---any offset changes
+{
+    
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+// 将要开始拖拽，手指已经放在view上并准备拖动的那一刻
+{
+    
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+// 将要结束拖拽，手指已拖动过view并准备离开手指的那一刻  注意：当属性pagingEnabled为YES时此函数不被调用
+{
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+// 已经结束拖拽，手指刚离开view的那一刻
+{
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+// view已经停止滚动
+{
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BB1470B7-6856-43F5-A680-64287CFE08F5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>scrollView delegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
