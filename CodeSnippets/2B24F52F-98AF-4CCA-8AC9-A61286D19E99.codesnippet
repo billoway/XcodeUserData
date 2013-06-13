@@ -25,17 +25,17 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	static NSString *tIdentifier = @"Identifier";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tIdentifier];
+	UITableViewCell *tCell = [tableView dequeueReusableCellWithIdentifier:tIdentifier];
     
-	if(!cell)
+	if(!tCell)
 	{
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tIdentifier] autorelease];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        cell.editingAccessoryType = UITableViewCellEditingStyleDelete;
+        tCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tIdentifier] autorelease];
+        tCell.selectionStyle = UITableViewCellSelectionStyleGray;
+        tCell.editingAccessoryType = UITableViewCellEditingStyleDelete;
     }
-    cell.textLabel.text = @"&lt;#s#&gt;";
+    tCell.textLabel.text = @"&lt;#s#&gt;";
     
-	return cell;
+	return tCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

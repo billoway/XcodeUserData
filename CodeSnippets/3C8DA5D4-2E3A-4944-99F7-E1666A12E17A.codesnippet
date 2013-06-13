@@ -3,20 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ireturn</string>
+	<string>addanimation</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if (&lt;#condition#&gt;) {&lt;#return#&gt;;}
-</string>
+	<string>    [UIView animateWithDuration:&lt;#0.f#&gt; delay:&lt;#0.f#&gt; options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+    } completion:^(BOOL finished) {
+        
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A9DA831-BEAA-4D4B-8BA4-DAD56899214F</string>
+	<string>3C8DA5D4-2E3A-4944-99F7-E1666A12E17A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>if return</string>
+	<string>uiview animation</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

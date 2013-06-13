@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addtextview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UITextView* tTextView = nil;
+    tTextView = [[UITextView alloc] init];
+    tTextView.frame = CGRectMake(&lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;, &lt;#.f#&gt;);
+    tTextView.backgroundColor = [UIColor clearColor];
+    tTextView.delegate = self;
+    tTextView.tag = &lt;#i#&gt;;
+    [tTextView setText:@"&lt;#s#&gt;"];
+    [tTextView setPlaceholder:@"&lt;#s#&gt;"];
+    [tTextView setFont:[UIFont boldSystemFontOfSize:&lt;#f#&gt;.f]];
+    [tTextView setTextColor:[UIColor &lt;#color#&gt;]];
+    [tTextView setShowsHorizontalScrollIndicator:NO];
+    [tTextView setShowsVerticalScrollIndicator:NO];
+    [tTextView setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];//垂直居中
+    [self.view addSubview:tTextView];
+    [tTextView release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9D66E4D6-9B8E-4050-9EFA-FFEB31A424A4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITextView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

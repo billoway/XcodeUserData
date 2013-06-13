@@ -12,22 +12,36 @@
 	<string>-(void) loadView
 {
     [super loadView];
-    //self.view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, f_Device_w, f_Device_h)] autorelease];
 }
 
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    
-}
+    [self createMainView];
 
-#pragma mark - -------- 页面 ----------
+}
 
 #pragma mark - -------- 响应 ----------
 
 #pragma mark - -------- 请求 ----------
 
 #pragma mark - -------- 返回 ----------
+
+-(void) responseEvent:(Command *)cmd
+{
+    //[super responseEvent:cmd];
+    if (cmd._id == 50) {
+        if (cmd._isSuccessful) {
+        }
+    }
+}
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+    
+}
 
 #pragma mark - -------- 内存 ----------
 

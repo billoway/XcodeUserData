@@ -3,20 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ireturn</string>
+	<string>ddefine</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if (&lt;#condition#&gt;) {&lt;#return#&gt;;}
-</string>
+	<string>#define &lt;#define#&gt;   ((D_Family==UIDeviceFamilyiPad)?&lt;#iPad#&gt;:\
+(((D_Family==UIDeviceFamilyiPhone)?((D_Platform==UIDevice5iPhone)?&lt;#iPhone5#&gt;:&lt;#iPhone4#&gt;):&lt;#unknow#&gt;)))</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A9DA831-BEAA-4D4B-8BA4-DAD56899214F</string>
+	<string>DFFF782D-6A28-4958-99F8-3D5F6918EDC7</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ddefine</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>if return</string>
+	<string>ddefine</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
