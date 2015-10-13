@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>jiekoum</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@implementation &lt;##&gt;Param
+
+    /// ==&gt; &lt;##&gt; 请求数据模型
+&lt;#create Param method#&gt;
+
+-(NSString*) getReqBody
+{
+    /******** 报文
+     
+     ********/
+    
+    NSMutableString *tReqXml = [[NSMutableString alloc] initWithCapacity:0];
+	[tReqXml addStr:[self getReqHeader:YES]];
+    &lt;#create request body xml#&gt;
+}
+
+-(TReqCfg) reqCfg
+{
+    TReqCfg tCfg = TReqCfgCreate();
+    tCfg.rspClass = [&lt;##&gt;Model class];
+    tCfg.reqCmd = "&lt;#login#&gt;";
+    tCfg.reqName = "&lt;#登录#&gt;";
+    return tCfg;
+}
+
+@end
+@implementation &lt;##&gt;Model
+
+-(void) parseValue:(id)param
+{
+    [super parseValue:param];
+    self._&lt;#list#&gt; = [self parseValue:[param objectForKey:@"&lt;#list#&gt;"] valueClass:[&lt;#list#&gt; class]];
+    
+}
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B752E977-1936-459D-A433-4D41D71FE7F4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>JieKou_M</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

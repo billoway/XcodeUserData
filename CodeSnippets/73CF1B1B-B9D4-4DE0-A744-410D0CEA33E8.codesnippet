@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pagelist</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createMainView];
+    
+    [self createTitleView:@"&lt;#标题栏#&gt;"];
+    [self._titleView left:nil btnImg:s_Title_Btn_Back];
+    [self._titleView right:nil btnImg:s_Title_Btn_Query];
+    
+}
+
+#pragma mark - -------- 响应 ----------
+
+-(void) titleBtnClick:(UIButton*)button
+{
+    NSInteger tag = [button tag];
+    if (tag == i_Title_Btn_Left) {
+        [self popController];
+    }
+}
+
+
+#pragma mark - -------- 请求 ----------
+    /// 获取列表请求数据模型
+-(BaseParam*) getListReqParam:(int)type
+{
+    BaseParam* param = [&lt;#Param#&gt; param&lt;##&gt;];
+    return param;
+}
+
+-(void) doRefreshPage:(BOOL)isRefresh
+{
+    if (self._tableView._dataList.count&gt;0 || self._tableView._currPage != -1) {
+        [self getTableData:self._tableView isRefresh:YES];
+    }
+}
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+    CGRect frame = CGRectMake(0, f_Page_y, f_Device_w, f_Page_h-f_TabBar_h);
+    self._tableView = [TTableView tableWithFrame:frame dataSource:self];
+    //    self._tableView.hideHeader = YES;
+    //    self._tableView.hideFooter = YES;
+    self._tableView.noRecordText = @"无记录";
+    [self addSubview:self._tableView];
+    [self._tableView refreshTable];
+
+        //    [self createQueryView];
+}
+
+#pragma mark - -------- TTableDataSource ----------
+
+-(float) getCellHeight:(NSIndexPath *)indexPath
+{
+    return &lt;#100/2.f#&gt;;
+}
+
+-(void) layoutCell:(TBaseTableCell *)cell indexPath:(NSIndexPath *)indexPath
+{
+    [cell layoutCellWithType:&lt;#cell_type#&gt; item:[self._tableView._dataList objectAtIndex:indexPath.row]];
+    [self._tableView addCellBtn:indexPath tag:1 btn:cell._mBtn1];   // 编辑
+    
+}
+-(TBaseTableCell*) cellAtIndexPath:(NSIndexPath *)indexPath
+{
+    TBaseTableCell* tCell = [self._tableView cellWithIdentifier:@"&lt;#testCell#&gt;:" indexPath:indexPath];
+    [self._tableView addCellBtn:indexPath tag:1 btn:tCell._mBtn1];
+    return tCell;
+}
+
+-(void) getTableData:(TTableView*)table isRefresh:(BOOL)isRefresh
+{
+        // -----  刷新列表
+    __block &lt;#BasePage#&gt;* bSelf = self;
+    BaseParam* param = [self getListReqParam:&lt;#(int)#&gt;];
+    [param setPageno:1 refresh:isRefresh];
+    [self doRequest:param resp:^(&lt;#BaseModel#&gt;* item) {
+        if (item.isSuccess) {
+            bSelf._tableView._currPage = item.pageno;
+            [bSelf._tableView doReloadListData:item.&lt;#_list#&gt;];
+        }else{
+            [bSelf._tableView tableReloadFaild];
+            [item respFaild];
+        }
+    }];
+}
+
+-(void) getMoreTableData:(TTableView*)table
+{
+        // ----- 获取更多
+    __block &lt;#BasePage#&gt;* bSelf = self;
+    BaseParam* param = [self getListReqParam:&lt;#(int)#&gt;];
+    [param setPageno:table._currPage+1 refresh:NO];
+    [self doRequest:param resp:^(&lt;#BaseModel#&gt;* item) {
+        if (item.isSuccess) {
+            bSelf._tableView._currPage = item.pageno;
+            [bSelf._tableView doAddListData:item.&lt;#_list#&gt;];
+        }else{
+            [bSelf._tableView tableGetMoreFaild];
+            [item respFaild];
+        }
+    }];
+}
+
+    // --- select cell
+-(void) cellSelected:(NSIndexPath*)indexPath
+{
+    DLog("---&gt; row &lt;%d&gt;",indexPath.row);
+    id item = [self._tableView._dataList objectAtIndex:indexPath.row];
+
+}
+
+-(void) cellBtnClick:(UIButton*)button
+{
+    NSInteger row = Get_Cell_Btn_Row(button.tag);
+    NSInteger tag = Get_Cell_Btn_Tag(button.tag);
+
+    DLog("---&gt; row &lt;%d&gt;  --&gt; tag &lt;%d&gt;",row,tag);
+    id item = [self._tableView._dataList objectAtIndex:row];
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>73CF1B1B-B9D4-4DE0-A744-410D0CEA33E8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>page of list</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

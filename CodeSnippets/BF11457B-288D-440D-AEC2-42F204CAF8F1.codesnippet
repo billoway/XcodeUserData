@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>jiekoumold</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@implementation &lt;##&gt;Param
+
+    /// ==&gt; &lt;##&gt; 请求数据模型
++(id) paramBy&lt;##&gt;:&lt;#(NSString*)#&gt;&lt;#param#&gt; &lt;##&gt;:&lt;#(NSString*)#&gt;&lt;#param#&gt;
+{
+    &lt;#login#&gt;* tParam = [[&lt;#login#&gt; alloc] init];
+    tParam._&lt;##&gt; = &lt;#param#&gt;;
+    tParam._&lt;##&gt; = &lt;#param#&gt;;
+    return tParam;
+}
+
+-(NSString*) getReqBody
+{
+    /******** 报文
+     
+     ********/
+    
+    NSMutableString *tReqXml = [[NSMutableString alloc] initWithCapacity:0];
+	[tReqXml addStr:[self getReqHeader:YES]];
+	[tReqXml addStr:@","];
+	[tReqXml addStr:k_Json_Str(@"&lt;##&gt;", self._&lt;##&gt;)];
+	[tReqXml addStr:@","];
+	[tReqXml addStr:k_Json_Str(@"&lt;##&gt;", self._&lt;##&gt;)];
+	[tReqXml addStr:@"}"];
+    return tReqXml;
+}
+
+-(TReqCfg) reqCfg
+{
+    TReqCfg tCfg = TReqCfgCreate();
+    tCfg.rspClass = [&lt;##&gt;Model class];
+    tCfg.reqCmd = "&lt;#login#&gt;";
+    tCfg.reqName = "&lt;#登录#&gt;";
+    return tCfg;
+}
+
+@end
+@implementation &lt;##&gt;Model
+
+-(void) parseValue:(id)param
+{
+    [super parseValue:param];
+    self._&lt;#list#&gt; = [self parseValue:[param objectForKey:@"&lt;#list#&gt;"] valueClass:[&lt;#list#&gt; class]];
+    
+}
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BF11457B-288D-440D-AEC2-42F204CAF8F1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>JieKou_M_old</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

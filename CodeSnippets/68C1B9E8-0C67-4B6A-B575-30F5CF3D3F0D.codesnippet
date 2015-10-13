@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>jiekouhbak</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+@interface &lt;##&gt;Param : BaseParam
+
+    /// ==&gt; &lt;##&gt; 请求数据模型
++(id) paramBy&lt;##&gt;:&lt;#(NSString*)#&gt;&lt;#param#&gt; &lt;##&gt;:&lt;#(NSString*)#&gt;&lt;#param#&gt;;
+
+@end
+@interface &lt;##&gt;Model : BaseModel
+
+
+@end
+/********
+&lt;##&gt; 
+ ********/
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>68C1B9E8-0C67-4B6A-B575-30F5CF3D3F0D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>JieKou_H_old</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

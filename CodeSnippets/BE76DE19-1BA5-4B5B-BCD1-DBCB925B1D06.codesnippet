@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>newbutton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// &lt;#注释#&gt;
+UIButton* tButton = [UIButton newButton:CGRectMake(&lt;#0.f#&gt;, &lt;#0.f#&gt;, &lt;#0.f#&gt;, &lt;#0.f#&gt;)];
+[tButton dosetTitle:@"&lt;#title#&gt;" font:&lt;#13#&gt;.f color:[UIColor hexColor:@"&lt;#color#&gt;"]];
+[tButton dosetClick:@selector(&lt;#btnClick:#&gt;) target:self tag:&lt;#50#&gt;];
+[tButton dosetImg:&lt;#@"imgName"#&gt; selectImg:nil highlightedImg:&lt;#@"imgName"#&gt;];
+[tButton dosetBgImg:&lt;#@"imgName"#&gt; selectImg:nil highlightedImg:&lt;#@"imgName"#&gt;];
+[self addSubview:tButton];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BE76DE19-1BA5-4B5B-BCD1-DBCB925B1D06</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>newbutton</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>new_button</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

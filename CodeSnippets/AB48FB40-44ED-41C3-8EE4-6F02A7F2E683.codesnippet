@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pageinfo</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createMainView];
+    
+    [self createTitleView:@"&lt;#标题栏#&gt;"];
+    [self._titleView left:nil btnImg:s_Title_Btn_Back];
+//    [self._titleView right:nil btnImg:@"title_btn_msg.png"];
+    
+}
+
+#pragma mark - -------- 响应 ----------
+
+-(void) titleBtnClick:(UIButton*)button
+{
+    int tag = [button tag];
+    if (tag == i_Title_Btn_Left) {
+        [self&lt;#._superPage#&gt; popController];
+    }
+}
+
+-(void) viewBtnClick:(UIButton*)button
+{
+    int tag = [button tag];
+    BasePage* tPage = nil;
+    
+    switch (tag) {
+        case 0:    //
+            break;
+        default:
+            break;
+    }
+    
+    if (tPage) {
+        [self._superPage pushController:tPage];
+    }
+}
+
+#pragma mark - -------- 请求 ----------
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AB48FB40-44ED-41C3-8EE4-6F02A7F2E683</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Page for Info</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

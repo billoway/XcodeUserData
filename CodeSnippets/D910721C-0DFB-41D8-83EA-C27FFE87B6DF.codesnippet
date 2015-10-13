@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>newactionsheet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [[self showActionSheet:&lt;#^(NSInteger index)click#&gt; title:&lt;#(NSString *)#&gt; msg:&lt;#(NSString *)#&gt; cancel:&lt;#(NSString *)#&gt; others:&lt;#(NSString *), ...#&gt;, nil] showInView:self.view];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D910721C-0DFB-41D8-83EA-C27FFE87B6DF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>new actionsheet</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>new actionsheet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -3,25 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>qqdoc</string>
+	<string>btnclick</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/**
- &lt;#description#&gt;
- @param &lt;#parameter#&gt;
- @returns &lt;#retval#&gt;
- @exception &lt;#throws#&gt;
- */
+	<string>-(void) &lt;#view#&gt;&lt;#BtnClick#&gt;:(UIButton*)button
+{
+    int tag = [button tag];
+    DLog(" ==&gt; %d",tag);
+
+    
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2B8E2326-92A7-4B1F-B3B2-748541010608</string>
+	<string>01DA76DC-A3F6-4DE1-A7AE-AB92F484A779</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>注释</string>
+	<string>btn click</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

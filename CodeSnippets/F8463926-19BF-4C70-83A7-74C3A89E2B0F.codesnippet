@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>newlabel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// &lt;#注释#&gt;
+&lt;#UILabel*#&gt; tLabel = [UILabel newLabel:CGRectMake(&lt;#0.f#&gt;, &lt;#0.f#&gt;, &lt;#0.f#&gt;, &lt;#0.f#&gt;)];
+[tLabel dosetText:&lt;#@""#&gt; font:&lt;#13#&gt;.f color:[UIColor hexColor:@"&lt;#color#&gt;"]];
+[&lt;#self#&gt; addSubview:tLabel];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F8463926-19BF-4C70-83A7-74C3A89E2B0F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>new_label</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>new_label</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

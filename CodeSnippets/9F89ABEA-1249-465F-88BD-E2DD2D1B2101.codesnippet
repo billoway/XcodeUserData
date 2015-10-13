@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pageview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - -------- 响应 ----------
+
+/// 更新数据源和回调  (可重写)
+- (void)refreshWithItem:(id)dataItem callBack:(TBlock)callBack;
+{
+    [super refreshWithItem:dataItem callBack:callBack];
+    [self layoutView];
+}
+/// 刷新视图 (子类需要可自己实现)
+- (void)layoutView;
+{
+    DLog(" ---- 刷新页面  dataItem:%@",self.dataItem);
+}
+
+#pragma mark - -------- 布局 ----------
+
+/// 界面初始化方法 (须重写)
+- (void)initView;
+{
+    self.backgroundColor = [UIColor whiteColor];
+    
+}
+
+#pragma mark - -------- private ----------
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9F89ABEA-1249-465F-88BD-E2DD2D1B2101</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>page of view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

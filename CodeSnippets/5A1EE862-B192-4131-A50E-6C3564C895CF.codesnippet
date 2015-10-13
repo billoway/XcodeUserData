@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>switchEx</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    switch (&lt;#expression#&gt;) {
+        case &lt;#constant#&gt;:     &lt;#statements#&gt;;     break;
+        case &lt;#constant#&gt;:     &lt;#statements#&gt;;     break;
+        case &lt;#constant#&gt;:     &lt;#statements#&gt;;     break;
+        default:  break;
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5A1EE862-B192-4131-A50E-6C3564C895CF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>switchEx</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>switchEx</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

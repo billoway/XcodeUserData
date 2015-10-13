@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>viewbtnclick</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void) viewBtnClick:(id)button
+{
+    NSInteger tag = [button tag];
+    //    BasePage* tPage = nil;
+    
+    switch (tag) {
+        case 50: // &lt;#注释#&gt;
+            
+            break;
+        default:
+            break;
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>81B786E2-EEB5-4A68-88D6-196C7E971F93</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>viewbtnclick</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>viewbtnclick</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pageedit</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createMainView];
+    
+    [self createTitleView:@"&lt;#编辑页面#&gt;"];
+    [self._titleView left:nil btnImg:s_Title_Btn_Cancel];
+    [self._titleView right:nil btnImg:s_Title_Btn_Done];
+}
+
+#pragma mark - -------- 响应 ----------
+
+-(void) titleBtnClick:(UIButton*)button
+{
+    NSInteger tag = [button tag];
+    if (tag == i_Title_Btn_Left) {
+        [self dismissController];
+    }
+}
+
+#pragma mark - -------- 请求 ----------
+
+// 发起预约
+-(void) doCommitRequest
+{
+    [self cancelBoard:nil];
+    
+    // 数据是否完成
+    for (NSInteger i=0; i&lt;self._editView.titles.count; i++) {
+        NSString* title = [self._editView.titles getNullTitle:i];
+        if (!k_Is_Empty(title) &amp;&amp; ![title isContain:@"备注"]) {
+            [self showAlert:title done:@"确定" cancel:nil click:^(int index) {
+                
+            }];
+            return;
+        }
+        // 数据是否标准
+        if (i==2) {
+            title = [self._editView.titles getUnNumberTitleAtIndex:i];
+            if (!k_Is_Empty(title)) {
+                [self showAlert:title done:@"确定" cancel:@"取消" click:^(int index) {
+                    
+                }];
+                return;
+            }
+        }
+    }
+    
+    __block &lt;#BasePage#&gt;* bSelf = self;
+    &lt;#BaseParam#&gt;* param = [&lt;#BaseParam#&gt; paramByDefault];
+    [self editInfo:self._editView.titles ToItem:param];
+    
+    [self doRequest:param resp:^(BaseModel* item) {
+        if (item.isSuccess) {
+            // 请求成功后 弹下来 并刷新上一级页面数据
+            [TLoadingView showAlert:@"&lt;#修改成功#&gt;"];
+            [bSelf._superPage refreshList];
+            [bSelf dismissController];
+        }
+        else{
+            [TLoadingView showAlert:k_Str_Fmt(" &lt;#修改失败#&gt;:%@",[item message])];
+        }
+    }];
+    
+}
+
+/// 编辑数据 =&gt; 请求数据模型
+-(void) editInfo:(DicExt*)dicEx ToItem:(&lt;#BaseParam#&gt;*)item
+{
+    // &lt;##&gt;
+    item._&lt;##&gt; = [dicEx objectAtIndex:0];
+    // &lt;##&gt;
+    item._&lt;##&gt; = [dicEx objectAtIndex:1];
+    // &lt;##&gt;
+    item._&lt;##&gt; = [dicEx objectAtIndex:2];
+    // &lt;##&gt;
+    item._&lt;##&gt; = [dicEx objectAtIndex:3];
+}
+
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+    self.isEditPage = YES;
+    CGRect frame = CGRectMake(0, f_Page_y, f_Device_w, f_Page_h);
+    self._editView = [TEditView editViewWithFrame:frame delegate:self];
+    [self addSubview:self._editView];
+    [self._editView setTitles:[self getListInfo]];
+}
+
+#pragma mark - -------- 编辑页面回调 ----------
+
+// 获取列表数据源
+-(DicExt*) getListInfo
+{
+    DicExt* listInfo = [DicExt dicExt];
+
+    [listInfo addObj:&lt;#@"value"#&gt; forKey:@"&lt;#key#&gt;"];
+    [listInfo addObj:&lt;#@"value"#&gt; forKey:@"&lt;#key#&gt;"];
+    [listInfo addObj:&lt;#@"value"#&gt; forKey:@"&lt;#key#&gt;"];
+    [listInfo addObj:&lt;#@"value"#&gt; forKey:@"&lt;#key#&gt;"];
+    
+    return listInfo;
+}
+
+/// 分区个数
+- (NSInteger)sectionCount:(TEditView *)table
+{
+    return 1;
+}
+// 分区中行个数
+-(NSInteger) rowCountInSection:(NSInteger)section table:(TEditView *)table
+{
+    return self._editView.titles.count;
+}
+/// 左边距
+-(CGFloat) leftWidthForCurrRow:(NSInteger)row table:(TEditView *)table
+{
+    return table.f_Section_Left;
+}
+-(UIView*) rightViewForCurrRow:(NSInteger)row table:(TEditView *)table
+{
+    UIImage* tImage = nil;
+    if (row==4){   // 联系电话
+        tImage = [UIImage getImage:@"&lt;#icon_list_jt_down.png#&gt;"];
+    }
+    
+    if (tImage) {
+        return [UIImageView newImgViewByImg:tImage];
+    }
+    return nil;
+}
+// 选择列表
+-(BOOL) didSelectCurrRow:(NSInteger)row table:(TEditView*)table
+{
+    UITextField* textField = [table getTextFieldAtRow:row];
+    textField.keyboardType = UIKeyboardTypeDefault;
+    
+    NSArray* pItems = nil;
+    NSString* pTitle= nil;
+    BOOL canEdit = NO;
+    
+    if (row==0) {
+        // &lt;#key#&gt;
+        canEdit = YES;
+        textField.keyboardType = UIKeyboardTypeEmailAddress;
+    }
+    else if (row==1){
+        // &lt;#key#&gt;
+        canEdit = NO;
+    }
+    else if (row==2 || row==3){
+        // &lt;#key#&gt;
+        canEdit = YES;
+        textField.keyboardType = UIKeyboardTypeNumberPad;
+    }
+    else if (row==4){
+        // &lt;#key#&gt;
+        canEdit = YES;
+    }
+    
+    if (!self._picker) {
+        self._picker   = [TActionPicker pickWithType:PickNormalType title:pTitle];
+    }
+    
+    if (!canEdit) {
+        [self cancelBoard:nil];
+    }
+    
+    if (pItems) {
+        [self cancelBoard:nil];
+        self._picker.tag = row;
+        [self._picker setPickTitle:pTitle];
+        [self._picker setItems:pItems];
+        [self._picker showPickerIn:self.view click:^BOOL(TActionPicker *picker, NSString *clickItem) {
+            [self._editView setText:clickItem row:row];
+            return YES;
+        }];
+    }
+    
+    return canEdit;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C22D01D3-95E5-4450-AB85-882CFE080E44</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>page of editview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

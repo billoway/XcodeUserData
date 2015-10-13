@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pagetab</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self createMainView];
+}
+
+#pragma mark - -------- TabBarDataSource ----------
+
+-(NSArray*) itemsForBottomBar
+{
+    return @[
+             @[@"tabbar_bg_&lt;#lm#&gt;_l.png",@"tabbar_bg_&lt;#lm#&gt;_l_h.png"],
+             @[@"tabbar_bg_&lt;#lm#&gt;_c.png",@"tabbar_bg_&lt;#lm#&gt;_c_h.png"],
+             @[@"tabbar_bg_&lt;#lm#&gt;_r.png",@"tabbar_bg_&lt;#lm#&gt;_r_h.png"]];
+}
+
+-(void) didSelectBarBtn:(NSInteger)index
+{
+
+}
+
+-(void) flashBadge
+{
+//    int lastCid = 0;
+//    if (lastCid == 1 || lastCid == 2) {
+//        [self.tabController flashBadgeAtIndex:lastCid isShow:YES];
+//    }
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self flashBadge];
+}
+
+#pragma mark - -------- 页面 ----------
+
+-(void) createMainView
+{
+    UINavigationController* tNav = nil;
+    BasePage* tPage = nil;
+    
+    NSMutableArray* tControllers = [NSMutableArray arrayWithCapacity:0];
+    
+    tPage = [[&lt;#BasePage#&gt; alloc] init];
+    tPage._superPage = self;
+    tNav = [tPage navWithController];
+    [tControllers addObject:tNav];
+    
+    tPage = [[&lt;#BasePage#&gt; alloc] init];
+    tPage._superPage = self;
+    tNav = [tPage navWithController];
+    [tControllers addObject:tNav];
+    
+    tPage = [[&lt;#BasePage#&gt; alloc] init];
+    tPage._superPage = self;
+    tNav = [tPage navWithController];
+    [tControllers addObject:tNav];
+    
+    TabBarController* tTabPage = [TabBarController tabBarWithDataSource:self];
+    [tTabPage setViewControllers:tControllers];
+    [tTabPage set_delegate:self];
+    [self addSubview:tTabPage.view];
+    self._mtabController = tTabPage;
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>02730420-A55F-4038-81C1-A16670BBF8E0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>page for tabbar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
